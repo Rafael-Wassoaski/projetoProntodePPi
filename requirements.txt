@@ -1,5 +1,4 @@
 PyMySQL
-pytz
 sqlparse
 Django==2.1.8
 mysqlclient==1.4.2.post1
