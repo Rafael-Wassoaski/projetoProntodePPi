@@ -1,7 +1,7 @@
 Django
 django-crispy-forms
 Pillow
-
+mysqlclient
 PyMySQL
 pytz
 sqlparse
