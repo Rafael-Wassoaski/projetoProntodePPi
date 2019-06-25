@@ -1,7 +1,7 @@
 Django
 django-crispy-forms
 Pillow
-pkg-resources
+
 PyMySQL
 pytz
 sqlparse
