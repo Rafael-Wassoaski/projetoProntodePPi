@@ -1,7 +1,7 @@
 Django
 django-crispy-forms
 Pillow
-mysqlclient==1.4.2.post1
+mysqlclient
 PyMySQL
 pytz
 sqlparse
