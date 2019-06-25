@@ -87,15 +87,15 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 #     }
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'RafaWassoaski$dicesAndDragonsDB',
-        'USER': 'RafaWassoaski',
-        'PASSWORD': '48shirai16',
-        'HOST': 'RafaWassoaski.mysql.pythonanywhere-services.com',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'RafaWassoaski$dicesAndDragonsDB',
+#         'USER': 'RafaWassoaski',
+#         'PASSWORD': '48shirai16',
+#         'HOST': 'RafaWassoaski.mysql.pythonanywhere-services.com',
+#     }
+# }
 
 
 # Password validation
