@@ -1,0 +1,49 @@
+{% extends 'base.html' %}%}
+
+{% block content %}
+
+<div class="p-3 mb-2 bg-primary text-white col-md-9 rounded mt-5" style="margin: auto">
+				
+					
+
+
+	<div id="post" class="mx-auto">
+		<h1>{{post.title}}</h1>
+		<p>Autor: {{post.author}}</p>
+		<h4 id = "text">{{post.text|linebreaksbr}}</h4>
+	
+	
+
+	
+	{% for resposta in respostas %}
+		<div id="respostas">
+			{{resposta.resposta}}
+
+			<form action="{% url 'blog:createRespostaResposta' pkPost=post.pk pkResposta=resposta.pk %}">
+				<button type="submit" class="btn-primary">Responder</button>
+			</form>
+		{% for respostaResps in respostasRespostas %}
+
+			{% if respostaResps.repostaMain == resposta %}
+
+					 <p class = "respostaResposta" >{{respostaResps.resposta}} </p>
+
+					
+
+			{% endif %}
+
+		{% endfor %}
+
+		
+			
+		</div>
+	{% endfor %}
+	<form action="{% url 'blog:createResposta' pk=post.pk %}">
+		<button type="submit" class="btn-success">Responder Post</button>
+	</form>
+
+</div>
+</div>
+	
+
+{% endblock %}

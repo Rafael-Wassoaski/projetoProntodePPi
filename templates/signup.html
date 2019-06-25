@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="p-3 mb-2 bg-primary text-white col-md-9" style="margin: auto">
+<h1>CADASTRO</h1>
+
+<form method="post" class="form-signin text-center">
+<h1 class="h3 mb-3 mt-3 font-weight-normal">LOGIN</h1>
+{% csrf_token %}
+
+
+<label class="" for="id_username">Nome de usuário</label>
+<br>
+{{form.username}}
+<br>
+
+<label class="" for="id_email">Email</label>
+<br>
+{{form.email}}
+<br>
+
+
+
+
+<label class="" for="id_password1">Senha</label>
+<br>
+{{form.password1}}
+<br>
+
+<label class="" for="id_password2">Confirme sua senha</label>
+<br>
+{{form.password2}}
+<br>
+
+
+<label class="mt-3" for="id_foto">Foto</label>
+
+{{form.foto}}
+<br>
+<button type="submit" class="btn btn-lg btn-success mt-3 mb-3">Cadastrar</button>
+</br>
+
+
+
+<a href="{% url 'password_reset' %}">Perdi minha senha</a>
+</form>
+</div>
+
+{% endblock %}

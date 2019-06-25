@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+	<!-- <div id= "formPost"> -->
+				<!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> -->
+			<div id = "charDetails" class="p-3 mb-2 bg-primary text-white col-md-9" style="margin: auto">
+				{% crispy quizForm %}
+			</div>
+			
+			<!-- </div> -->
+			
+	<!-- </div> -->
+{% endblock %}

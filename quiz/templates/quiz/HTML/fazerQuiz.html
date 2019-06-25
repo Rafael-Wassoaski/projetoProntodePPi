@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+<div id = "charDetails" class="p-3 mb-2 bg-primary text-white col-md-9 mt-5 rounded" style="margin: auto">
+	<div id = "post" class="mx-auto">
+		<h2>Titulo: {{quiz.title}}</h2>
+
+		<h3>Descrição: {{quiz.descricao}}</h3>
+		
+		<form method="POST">{% csrf_token %}
+
+			{% for pergunta in perguntas %}
+
+			<div id='pergunta'>
+				<h3>Pergunta: {{pergunta.pergunta}}</h3>
+				<button type="button" class="btn btn-secondary" data-toggle="tooltip" data-html="true" title="Dica: {{pergunta.dica}}">
+  				<i style='font-size:24px' class='fas'>&#xf128;</i>
+				</button>
+
+
+				<input type="text" name= '{{pergunta.pergunta}}'>
+			</div>
+			
+			{% endfor %}
+		</br>
+		<button type="submit" class="btn-success">Responder</button>
+	</form>
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+
+
+
+
+{% load staticfiles %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+
+	<!-- <div id= "formPost"> -->
+				<!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"> -->
+				<div class="p-3 mb-2 bg-primary text-white col-md-9" style="margin: auto">
+					<a class='random' onclick="gerarChar()"><i style='font-size:120px margin-top 20px margin-left:auto;' class='fas '>&#xf6cf;</i></a>
+				{% crispy fomularioChar %}
+			</div>
+			<!-- </div> -->
+			
+	<!-- </div> -->
+	<script src="{% static 'js/formsBlog.js' %}"></script>
+{% endblock %}

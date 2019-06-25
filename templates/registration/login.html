@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+
+<form method="post" class="form-signin text-center">
+	<h1 class="h3 mb-3 mt-3 font-weight-normal">LOGIN</h1>
+  {% csrf_token %}
+
+
+  <label class="" for="id_username">Nome de usuário</label>
+  <br>
+  {{form.username}}
+<br>
+
+  <label class="" for="id_password">Senha</label>
+  <br>
+  {{form.password}}
+  <br>
+  <button type="submit" class="btn btn-lg btn-primary mt-3 mb-3">Login</button>
+</br>
+  <a href="{% url 'password_reset' %}">Perdi minha senha</a>
+</form>
+
+
+{% endblock %}

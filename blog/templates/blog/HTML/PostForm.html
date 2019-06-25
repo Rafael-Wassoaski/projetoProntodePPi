@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+<div class="p-3 mb-2 bg-primary text-white col-md-9 mt-5 rounded" style="margin: auto">
+				
+						{% crispy postForm %}
+			</div>
+
+{% endblock %}

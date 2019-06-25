@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+
+
+{% block content %}
+	{% for char in chars %}
+
+	
+
+
+<div class="card" style="width: 18rem; margin: auto; margin-top: 20px;">
+        {% if char.rosto %}
+          <img src="{{char.rosto.url}}" alt="{{char.name}}" style="height: 24rem;" />
+        {% endif %}
+
+  <div class="card-body">
+    <h5 class="card-title">Nome: {{char.name}}</h5>
+    <p class="card-text">Classe: {{char.classe}}</p>
+    <p class="card-text">Autor:{{char.author}}</p>
+    <a href="{% url 'blog:charDetails' pk=char.pk %}" class="btn btn-primary">Conhecer Personagem</a>
+  </div>
+</div>
+
+	{% endfor %}
+
+
+
+{% endblock %}

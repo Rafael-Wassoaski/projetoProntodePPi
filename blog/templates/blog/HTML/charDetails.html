@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+	
+
+	<!-- <img src="{{char.rosto.url}}"> -->
+	<div id = "charDetails" class="p-3 mb-2 bg-primary text-white col-md-9" style="margin: auto">
+
+		<div id = "detalhes">
+
+{%if char.rosto %}
+					<img src="{{char.rosto.url}}" alt="{{char.name}}" style="height: 24rem; " />
+					{% endif %}
+
+			<table class="table">
+				<thead  class="thead-dark">
+				<tr>
+					<th scope="col">Caracteristicas</th>
+					<th scope="col">Pericias</th>
+					
+			
+				</tr>
+				</thead>
+
+
+			
+		<tbody>
+			<tr>
+				<td>Nome: {{char.name}} </td>
+				<td>Acrobacia: {{char.acrobacia}}</td>
+				
+			<tr>
+				<td>Classe: {{char.classe}}</td>
+				<td>Atletismo: {{per.atletismo}}</td>
+			</tr>
+
+			<tr>
+			<td>Tamanho: {{char.tamanho}}</td>
+			<td>Blefe: {{per.blefe}}</td>
+			</tr>
+
+
+			<tr>
+			<td>Raça: {{char.raca}}</td>
+			<td>Diplomacia: {{per.diplomacia}}</td>
+			</tr>
+		
+
+			<tr>
+			<td>Idade: {{char.idade}}</td>
+			<td>Exploração: {{per.exploracao}}</td>
+			</tr>
+
+
+			<tr>
+			<td>Sexo: {{char.sexo}}</td>
+			<td>Furtividade: {{per.furtividade}}</td>
+			</tr>
+
+			<tr>
+			<td>Altura: {{char.altura}}</td>
+			<td>História: {{per.historia}}</td>
+			</tr>
+
+			<tr>
+			<td>Peso: {{char.peso}}</td>
+			<td>Intimidação: {{per.intimidacao}}</td>
+			</tr>
+
+			<tr>
+			<td>Olhos: {{char.olhos}}</td>
+			<td>Intuição: {{per.intuicao}}</td>
+			</tr>
+
+			<tr>
+			<td>Cabelo: {{char.cabelo}}</td>
+			<td>Ladinagem: {{per.ladinagem}}</td>
+			</tr>
+
+			<tr>
+			<td>Divindade: {{char.divindade}}</td>
+			<td>Manha: {{per.manha}}</td>
+			</tr>
+
+			<tr>
+			<td>Tendencias: {{char.tendencia}}</td>
+			<td>Natureza: {{per.natureza}}</td>
+			</tr>
+
+			<tr>
+			<td>Idiomas: {{char.idiomas}}</td>
+			<td>Percepção: {{per.percepcao}}</td>
+			</tr>
+
+			<tr>
+			<td>Força: {{char.forca}}</td>
+			<td>Religião: {{per.religiao}}</td>
+			</tr>
+
+			<tr>
+			<td>Constituição: {{char.constituicao}}</td>
+			<td>Socorro: {{per.socorro}}</td>
+			</tr>
+
+			<tr>
+			<td>Destreza: {{char.destreza}}</td>
+			<td>Tolerância: {{per.tolerancia}}</td>
+			</tr>
+
+			<tr>
+			<td>Inteligência: {{char.inteligencia}}</td>
+			</tr>
+
+			<tr>
+			<td>Sabedoria: {{char.sabedoria}}</td>
+			</tr>
+
+			<tr>
+			<td>Carisma: {{char.carisma}}</td>
+			</tr>
+
+			<tr>
+			<td>Pontos de Vida:{{char.pontosDeVida}}</td>
+			</tr>
+
+			<tr>
+			<td>Iniciativa: {{char.iniciativa}}</td>
+			</tr>
+
+			<tr>
+			<td>Deslocamento: {{char.deslocamento}}</td>
+			</tr>
+			
+
+		
+	
+			</tbody>
+		</table>
+		
+		</div>
+		
+	<div>
+
+
+
+
+{% endblock %}

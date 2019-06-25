@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+
+<div class="p-3 mb-2 bg-primary text-white col-md-9 mt-5 rounded" style="margin: auto">
+ <div id = "post" class="mx-auto">
+
+ 	
+	<h1>{{aventura.titulo}}</h1>
+	<h4>Autor{{aventura.author}}</h4>
+	<p>{{aventura.aventura|linebreaksbr}}</p>
+	<p>{{aventura.genero}}</p>
+	<p>{{aventura.itens}}</p>
+	<p>{{aventura.numeroJogadores}}</p>
+	<p>{{aventura.npcs}}</p>
+
+
+
+	<span id="likes">{{aventura.likes}}</span><a id = 'bntlike'onclick="like('{{aventura.pk}}')"  class="btn" ><i class="fas fa-thumbs-up"></i></a>
+
+
+	<a onclick="deslike('{{aventura.pk}}')" class="btn" id = 'bntunlike'><i class="fas fa-thumbs-down"></i></i></a><span id="unlike">{{aventura.deslikes}}</span>
+
+
+</div>
+
+</div>
+<script src="{% static 'js/jquery.js' %}"></script>
+
+
+{% endblock %}
